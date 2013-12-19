@@ -17,6 +17,7 @@ describe "Static pages" do
 
     it { should have_selector('h1',    text: 'Help') }
     it { should have_selector('title', text: full_title('Help')) }
+    #it { should_not have_selector 'title', text: '| Help' }
   end
 
   describe "About page" do
@@ -24,6 +25,7 @@ describe "Static pages" do
 
     it { should have_selector('h1',    text: 'About') }
     it { should have_selector('title', text: full_title('About Us')) }
+    #it { should_not have_selector 'title', text: '| About Us' }
   end
 
   describe "Contact page" do
@@ -31,5 +33,6 @@ describe "Static pages" do
 
     it { should have_selector('h1',    text: 'Contact') }
     it { should have_selector('title', text: full_title('Contact')) }
+   # it { should_not have_selector 'title', text: '| Contact' }
   end
 end
